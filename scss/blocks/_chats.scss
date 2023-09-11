@@ -1,0 +1,97 @@
+.chats{
+    position: relative;
+    &-box1{
+        display: flex;
+        align-items: center;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        max-width: 47%;
+        &-title{
+            margin-bottom: 24px;
+            color: $darkColor;
+        }
+        &-desc{
+            margin-bottom: 48px;
+            color: $darkColor;
+        }
+    }
+
+    &-box2{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    &__info1{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+    &__img{
+        max-width: 50%;
+    }
+
+    &__imgs{
+        max-width: 50%;
+    }
+    &__img3, &__img2{
+        position: absolute;
+    }
+
+    &__img1{
+        transform: translateX(100px);
+    }
+    &__img2{
+        z-index: 2;
+        top: 335px;
+    }
+}
+
+@media screen and (max-width: 835px) {
+    .chats{
+        padding: 0;
+        &-box1{
+            flex-direction: column-reverse;
+            overflow: hidden;
+            align-items: baseline;
+            padding-left: 30px;
+        }
+        &__img{
+            max-width: 50%;
+        }
+        &__info{
+            max-width: 80%;
+           
+        }
+        &__info1{
+            display: flex;
+            flex-direction: column;
+            max-width: 50%;
+           
+        }
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .chats{
+        &-box1{
+            overflow: hidden;
+        }
+        &__info1{
+            &-title{
+                font-size: 28px;
+                line-height: 36px;
+            }
+            &-desc{
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+        &__img{
+            height: 150%;
+        }
+    }
+}
